@@ -1,8 +1,8 @@
-{ nodejs-14_x, jq, openssl, stdenv, mkShell, lib, fetchurl, writeText, writeTextFile, runCommand, fetchFromGitHub }:
+{ nodejs-18_x, jq, openssl, stdenv, mkShell, lib, fetchurl, writeText, writeTextFile, runCommand, fetchFromGitHub }:
 rec {
   # Versions >= 15 use npm >= 7, which uses npm lockfile version 2, which we don't support yet
   # See the assertion in the node_modules function
-  default_nodejs = nodejs-14_x;
+  default_nodejs = nodejs-18_x;
 
 
   # builtins.fetchGit wrapper that ensures compatibility with Nix 2.3 and Nix 2.4
